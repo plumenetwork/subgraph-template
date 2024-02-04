@@ -9,25 +9,26 @@ cd subgraph-template
 npm install @graphprotocol/graph-ts 
 ```
 3. Add your contract abi to `/abi`
-4. Customize mapping.ts and schema.graphql 
+4. Add the deployed contract address to your config `plume.json` file
+5. Customize mapping.ts and schema.graphql 
 * `mapping.ts`: This TypeScript file contains the logic to process blockchain events and map them to entities in your GraphQL schema, enabling the indexing of blockchain data for queries.
 * `schema.graphql`: Defines the structure of data to be indexed from the blockchain, detailing entities, their fields, and relationships for efficient querying through your subgraph. <br>
 Ref : [The Graph](https://thegraph.com/docs/en/developing/creating-a-subgraph/) for more details
-5. Generate AssemblyScript types for smart contract ABIs and the GraphQL schema, facilitating type-safe development of the subgraph.
+6. Generate AssemblyScript types for smart contract ABIs and the GraphQL schema, facilitating type-safe development of the subgraph.
 ```
 graph codegen
 ```
 
-6. Compile the subgraph to WebAssembly
+7. Compile the subgraph to WebAssembly
 ```
 graph build
 ```
 
-7. Deploy subgraph to goldksy
+8. Deploy subgraph to goldksy
 ```
 goldsky subgraph deploy nft/1.0.0 --path .
 ```
-8. Go the the GraphQl api that you get after running the above command <br>
+9. Go the the GraphQl api that you get after running the above command <br>
 Here are some sample queries for the template which can query all holders of a NFT collection
 * Fetch All Accounts With Their Tokens
 ```
