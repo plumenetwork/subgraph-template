@@ -1,0 +1,8 @@
+{
+    "network": "plume-testnet",
+    "address": "0x2ea66dFcf2E8f77C8d68F6f4B2de0aeAa7e88e02",
+    "startBlock": 893,
+    "file": "NFT",
+    "tokenEvent": "Transfer(indexed address,indexed address,indexed uint256)"
+  }
+  
